@@ -5,7 +5,7 @@
     --color-heading: #eef3db;
     --color-base: #033f47;
     --color-base2: #022a30;
-    --color-brand: #bce3bf;
+    --color-brand: #8ec867;
     --color-brand2: #deff58;
     --sidebar-width: 240px;
     --font-base: "Bai Jamjuree";
@@ -29,15 +29,22 @@ a {
     transition: all 0.4s ease;
 
 }
-a:hover {
-    color: var(--color-brand);
+
+a:hover 
+{
+    color: var(--color-brand2);
 
 }
 
 img {
+
     width: 100%;
 
 }
+.text-brand {
+color: var(--color-brand2);
+}
+
 
 .full-height {
     min-height: 100vh;
@@ -45,13 +52,17 @@ img {
     display: flex;
     flex-direction:column;
     justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid rgba(255,255,255, 0.1)
+
 
 
 }
 
 /* NAVBAR*/
 .navbar {
-    background-color: var(--color-base);
+    background-color: var(--brand-color);
 }
     
 
@@ -85,4 +96,47 @@ img {
         #content-wrapper{
          padding-left: var(--sidebar-width);   
         }
+
+       
+        
 }
+
+ /* BTN */
+ .btn {
+     padding: 12px 28px;
+     font-weight: 700;
+
+ }
+
+ .btn-brand {
+     background-color: var(--color-base2);
+     border-color: var(--color-brand);
+     color: var(--color-brand2);
+ }
+
+ .btn-brand:focus {
+     background-color: var(--color-base2);
+     color: var(--color-brand2);
+     border-color: var(--color-brand2);
+ }
+
+ .link-custom{
+
+    font-weight: 700;
+    position: relative;
+ }
+
+ .link-custom::after {
+    content:"";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left:0;
+    top: 110%;
+    transition: all 0.4s;
+ }
+
+ .link-custom:hover::after {
+    width: 100%
+ }
